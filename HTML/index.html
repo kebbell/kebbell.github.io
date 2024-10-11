@@ -108,132 +108,101 @@
     <!--========== END HEADER ==========-->
 
     <!--========== PAGE LAYOUT ==========-->
-    <div id="sidebar-toggle">
-      <i>&#x25BA;</i>
-      <!-- Right-pointing arrow icon -->
-    </div>
+    <div>
 
-    <!-- <div class="main">
-      <div id="demo-remote">
-        <p id="modes">
-          <label for="mode-choice">Choose the mode you want</label><br />
-          <span>
-            <label for="mode-manual">manual</label>
-            <input
-              type="radio"
-              value="manual"
-              id="mode-manual"
-              name="mode-choice"
-            /><br />
-            <label for="mode-automatic">automatic</label>
-            <input
-              type="radio"
-              value="automatic"
-              id="mode-automatic"
-              name="mode-choice"
-            /><br />
-            <label for="mode-semiautomatic">semi-automatic</label>
-            <input
-              type="radio"
-              value="semiautomatic"
-              id="mode-semiautomatic"
-              name="mode-choice"
-            />
-          </span>
-        </p>
-
-        <p>
-          <label for="panels">Panels to display</label><br />
-          <span>
-            <label for="panel-cover">cover</label>
-            <input
-              type="checkbox"
-              value="1"
-              id="panel-cover"
-              name="panel-cover"
-            /><br />
-            <label for="panel-playlist">playlist</label>
-            <input
-              type="checkbox"
-              value="1"
-              id="panel-playlist"
-              name="panel-playlist"
-            /><br />
-            <label for="panel-infos">infos</label>
-            <input
-              type="checkbox"
-              value="1"
-              id="panel-infos"
-              name="panel-infos"
-            />
-          </span>
-        </p>
-
-        <p>
-          <label for="panel-infos-choice">Choose the infos you want</label
-          ><br />
-          <span>
-            <label for="panel-infos-choice-duration">duration</label>
-            <input
-              type="checkbox"
-              value="1"
-              id="panel-infos-choice-duration"
-              name="panel-infos-choice"
-            /><br />
-            <label for="panel-infos-choice-current">current</label>
-            <input
-              type="checkbox"
-              value="1"
-              id="panel-infos-choice-current"
-              name="panel-infos-choice"
-            /><br />
-            <label for="panel-infos-choice-timer">timer</label>
-            <input
-              type="checkbox"
-              value="1"
-              id="panel-infos-choice-timer"
-              name="panel-infos-choice"
-            /><br />
-            <label for="panel-infos-choice-position">position</label>
-            <input
-              type="checkbox"
-              value="1"
-              id="panel-infos-choice-position"
-              name="panel-infos-choice"
-            />
-          </span>
-        </p>
-
-        <p>
-          <label for="theme">Theme</label><br />
-          <span>
-            <label for="theme-wood">wood</label>
-            <input
-              type="radio"
-              value="wood"
-              id="theme-wood"
-              name="theme-choice"
-            /><br />
-            <label for="theme-alu">alu</label>
-            <input
-              type="radio"
-              value="alu"
-              id="theme-alu"
-              name="theme-choice"
-            />
-          </span>
-        </p>
-
-        <p>
-          <label for="debug">Debug mode (console)</label>
-          <input type="checkbox" value="1" id="debug" name="debug" />
-        </p>
-      </div>
-
-      <div id="demo-player">
-        <div id="player"></div>
-      </div>
-    </div> -->
+        <div id="tt-wrapper-wrapper">
+        
+        <div id="tt-wrapper">
+        
+        <div id="tt-container">
+        
+        <div id="tt-1" class="turntable">
+        
+         <div class="body">
+        
+          <div class="platter">
+           <div class="ring"></div>
+           <div class="record">
+            <div class="record-ui">
+             <div class="slipmat"></div>
+             <div class="slipmat slipmat-y"></div>
+             <div class="slipmat slipmat-f"></div>
+             <div class="grooves"></div>
+             <div class="loader"></div>
+             <div class="label"></div>
+             <div class="label-notches"></div>
+            </div>
+            <div class="spindle"></div>
+            <div class="shiny"></div>
+            <div class="cover"></div>
+        
+           </div>
+          </div>
+        
+          <div class="powerlight"><div class="powerlight-on"></div></div>
+          <div class="tonearm">
+           <img src="image/table_tonearm.png" alt="" class="tonearm-image" />
+          </div>
+        
+          <div class="pitch-box scratch-mode">
+           <div class="pitch">
+            <div class="label">pitch adj.</div>
+            <div class="legend">
+             <ul class="markers">
+              <li>-8<span>■</span></li>
+              <li>-</li>
+              <li>6<span>■</span></li>
+              <li>-</li>
+              <li>4<span>■</span></li>
+              <li>-</li>
+              <li>2<span>■</span></li>
+              <li>-</li>
+              <li>&mdash;</li>
+              <li>-</li>
+              <li>2<span>■</span></li>
+              <li>-</li>
+              <li>4<span>■</span></li>
+              <li>-</li>
+              <li>6<span>■</span></li>
+              <li>-</li>
+              <li>+8<span>■</span></li>
+             </ul>
+            </div>
+            <div class="rail"></div>
+        
+            <div class="pitch-slider" title="Pitch control">
+             <div class="shade-top"></div>
+             <div class="shade-bottom"></div>
+             <div class="pitch-line"></div>
+            </div>
+            <div class="control-pitch-slider-text"></div>
+            <div class="pitch-box-hider">
+             <input id="tt-1-pitch-slider" class="control-pitch-slider-input" type="range" min="0" max="160" value="80" />
+            </div>
+        
+           </div>
+          </div>
+        
+          <div class="powerdial-led"></div>
+          <a href="#110vac" title="Power on/off" class="powerdial" onclick="return false">on / off</a>
+          <a href="#onoff" title="start/stop" class="startstop" onclick="return false">start &middot; stop</a>
+          <a href="#33rpm" title="33 RPM" class="rpm-33" onclick="return false"><span>33rpm</span></a>
+          <a href="#45rpm" title="45 RPM" class="rpm-45" onclick="return false"><span>45rpm</span></a>
+         </div>
+        
+         <div id="tt-1-waveform" class="waveform">
+          <div class="loader"></div>
+          <div class="waveform-1">
+           <div class="playhead"></div>
+           <div class="playhead-arrow"></div>
+          </div>
+          <div class="waveform-2">
+           <div class="playhead-arrow compact"></div>
+          </div>
+         </div>
+        
+        </div>
+        
 
     <!-- Features -->
     <div class="section-seperator">
