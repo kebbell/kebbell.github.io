@@ -1137,8 +1137,9 @@ body {
 } */
 
 #vinyl-player {
-  border: 2px solid red; /* Temporary test style */
-  background-color: yellow; /* Temporary test style */
+  padding: 200px 100px;
+  /* display: flex;
+  flex-direction: row; */
 }
 
 
@@ -1285,6 +1286,7 @@ body {
 
 .pause #record {
   animation-play-state: paused;
+
 }
 
 #shine {
