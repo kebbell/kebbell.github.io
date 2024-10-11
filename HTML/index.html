@@ -9,7 +9,6 @@
     <meta content="" name="description" />
     <meta content="" name="author" />
 
-
     <!-- GLOBAL MANDATORY STYLES -->
     <link
       href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700"
@@ -44,7 +43,7 @@
   <!-- END HEAD -->
 
   <!-- BODY -->
-  <body>
+  <body data-speed="33">
     <!--========== HEADER ==========-->
     <header class="header">
       <!-- Navbar -->
@@ -109,7 +108,57 @@
     <!--========== END HEADER ==========-->
 
     <!--========== PAGE LAYOUT ==========-->
-    
+
+    <!-- Turntable -->
+    <div id="vinyl-player">
+      <div id="buttons">
+        <div id="volume">
+          <input type="range" class="slider" min="0" max="100" />
+          <div class="label"></div>
+        </div>
+        <div>
+          <div id="track" class="button">Track</div>
+          <div id="speed">
+            <div id="speed33" class="button active">
+              <span class="label">33</span>
+              <span class="indicator"></span>
+            </div>
+            <div id="speed45" class="button">
+              <span class="label">45</span>
+              <span class="indicator"></span>
+            </div>
+          </div>
+        </div>
+        <div id="power" class="button">Start - Stop</div>
+        <div id="brand"></div>
+      </div>
+      <div id="turntable" class="pause">
+        <div id="record">
+          <div id="record-inner">
+            <div id="label">
+              <iframe
+                id="player"
+                width="560"
+                height="315"
+                src
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <div id="shine"></div>
+        <div id="controls">
+          <div id="arm">
+            <div class="base"></div>
+            <div class="arm">
+              <div class="head"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Features -->
     <div class="section-seperator">
