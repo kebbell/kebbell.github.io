@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <!-- BEGIN HEAD -->
+  <head>
+    <meta charset="utf-8" />
+    <title>Sam Kebbells Portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+
+    <!-- GLOBAL MANDATORY STYLES -->
+    <link
+      href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="vendor/simple-line-icons/simple-line-icons.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- PAGE LEVEL PLUGIN STYLES -->
+    <link href="css/animate.css" rel="stylesheet" />
+    <link
+      href="vendor/swiper/css/swiper.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- THEME STYLES -->
+    <link href="css/layout.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+  <!-- END HEAD -->
+
+  <!-- BODY -->
+  <body>
+    <!--========== HEADER ==========-->
+    <header class="header">
+      <!-- Navbar -->
+      <nav class="navbar" role="navigation">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="menu-container">
+            <button
+              type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target=".nav-collapse"
+            >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="toggle-icon"></span>
+            </button>
+
+            <!-- Logo -->
+            <div class="navbar-logo">
+              <a class="navbar-logo-wrap" href="index.html">
+                <h1>Sam Kebbell</h1>
+              </a>
+            </div>
+            <!-- End Logo -->
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse nav-collapse">
+            <div class="menu-container">
+              <ul class="navbar-nav navbar-nav-right">
+                <!-- Home -->
+                <li class="nav-item">
+                  <a class="nav-item-child active" href="index.html"> Home </a>
+                </li>
+                <!-- End Home -->
+
+                <!-- About -->
+                <li class="nav-item">
+                  <a class="nav-item-child" href="about.html"> About </a>
+                </li>
+                <!-- End About -->
+
+                <!-- Work -->
+                <li class="nav-item">
+                  <a class="nav-item-child" href="work.html"> Projects </a>
+                </li>
+                <!-- End Work -->
+
+                <!-- Contact -->
+                <li class="nav-item">
+                  <a class="nav-item-child" href="contact.html"> Contact </a>
+                </li>
+                <!-- End Contact -->
+              </ul>
+            </div>
+          </div>
+          <!-- End Navbar Collapse -->
+        </div>
+      </nav>
+      <!-- Navbar -->
+    </header>
+    <!--========== END HEADER ==========-->
+
+    <!--========== PAGE LAYOUT ==========-->
+    <div id="sidebar-toggle">
+      <i>&#x25BA;</i>
+      <!-- Right-pointing arrow icon -->
+    </div>
+
+    <!-- <div class="main">
+      <div id="demo-remote">
+        <p id="modes">
+          <label for="mode-choice">Choose the mode you want</label><br />
+          <span>
+            <label for="mode-manual">manual</label>
+            <input
+              type="radio"
+              value="manual"
+              id="mode-manual"
+              name="mode-choice"
+            /><br />
+            <label for="mode-automatic">automatic</label>
+            <input
+              type="radio"
+              value="automatic"
+              id="mode-automatic"
+              name="mode-choice"
+            /><br />
+            <label for="mode-semiautomatic">semi-automatic</label>
+            <input
+              type="radio"
+              value="semiautomatic"
+              id="mode-semiautomatic"
+              name="mode-choice"
+            />
+          </span>
+        </p>
+
+        <p>
+          <label for="panels">Panels to display</label><br />
+          <span>
+            <label for="panel-cover">cover</label>
+            <input
+              type="checkbox"
+              value="1"
+              id="panel-cover"
+              name="panel-cover"
+            /><br />
+            <label for="panel-playlist">playlist</label>
+            <input
+              type="checkbox"
+              value="1"
+              id="panel-playlist"
+              name="panel-playlist"
+            /><br />
+            <label for="panel-infos">infos</label>
+            <input
+              type="checkbox"
+              value="1"
+              id="panel-infos"
+              name="panel-infos"
+            />
+          </span>
+        </p>
+
+        <p>
+          <label for="panel-infos-choice">Choose the infos you want</label
+          ><br />
+          <span>
+            <label for="panel-infos-choice-duration">duration</label>
+            <input
+              type="checkbox"
+              value="1"
+              id="panel-infos-choice-duration"
+              name="panel-infos-choice"
+            /><br />
+            <label for="panel-infos-choice-current">current</label>
+            <input
+              type="checkbox"
+              value="1"
+              id="panel-infos-choice-current"
+              name="panel-infos-choice"
+            /><br />
+            <label for="panel-infos-choice-timer">timer</label>
+            <input
+              type="checkbox"
+              value="1"
+              id="panel-infos-choice-timer"
+              name="panel-infos-choice"
+            /><br />
+            <label for="panel-infos-choice-position">position</label>
+            <input
+              type="checkbox"
+              value="1"
+              id="panel-infos-choice-position"
+              name="panel-infos-choice"
+            />
+          </span>
+        </p>
+
+        <p>
+          <label for="theme">Theme</label><br />
+          <span>
+            <label for="theme-wood">wood</label>
+            <input
+              type="radio"
+              value="wood"
+              id="theme-wood"
+              name="theme-choice"
+            /><br />
+            <label for="theme-alu">alu</label>
+            <input
+              type="radio"
+              value="alu"
+              id="theme-alu"
+              name="theme-choice"
+            />
+          </span>
+        </p>
+
+        <p>
+          <label for="debug">Debug mode (console)</label>
+          <input type="checkbox" value="1" id="debug" name="debug" />
+        </p>
+      </div>
+
+      <div id="demo-player">
+        <div id="player"></div>
+      </div>
+    </div> -->
+
+    <!-- Features -->
+    <div class="section-seperator">
+      <div class="content-md container">
+        <div class="row">
+          <div class="col-sm-4 sm-margin-b-50">
+            <div
+              class="wow fadeInLeft"
+              data-wow-duration=".3"
+              data-wow-delay=".3s"
+            >
+              <h3>Art Of Coding</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit sed
+                tempor incididunt ut laboret dolore magna ut consequat siad
+                esqudiat dolor
+              </p>
+              <a class="link" href="#">Read More</a>
+            </div>
+          </div>
+          <div class="col-sm-4 sm-margin-b-50">
+            <div
+              class="wow fadeInLeft"
+              data-wow-duration=".3"
+              data-wow-delay=".2s"
+            >
+              <h3>Clean Design</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit sed
+                tempor incididunt ut laboret dolore magna ut consequat siad
+                esqudiat dolor
+              </p>
+              <a class="link" href="#">Read More</a>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div
+              class="wow fadeInLeft"
+              data-wow-duration=".3"
+              data-wow-delay=".1s"
+            >
+              <h3>Amazing Support</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit sed
+                tempor incididunt ut laboret dolore magna ut consequat siad
+                esqudiat dolor
+              </p>
+              <a class="link" href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+        <!--// end row -->
+      </div>
+    </div>
+    <!-- End Features -->
+
+    <!--========== END PAGE LAYOUT ==========-->
+
+    <!--========== FOOTER ==========-->
+    <footer class="footer">
+      <!-- Links -->
+      <div class="section-seperator">
+        <div class="content-md container">
+          <div class="row">
+            <div class="col-sm-2 sm-margin-b-30">
+              <!-- List -->
+              <ul class="list-unstyled footer-list">
+                <li class="footer-list-item"><a href="#">Home</a></li>
+                <li class="footer-list-item"><a href="#">About</a></li>
+                <li class="footer-list-item"><a href="#">Projects</a></li>
+                <li class="footer-list-item"><a href="#">Contact</a></li>
+              </ul>
+              <!-- End List -->
+            </div>
+            <div class="col-sm-2 sm-margin-b-30">
+              <!-- List -->
+              <ul class="list-unstyled footer-list">
+                <li class="footer-list-item"><a href="#">Twitter</a></li>
+                <li class="footer-list-item"><a href="#">Facebook</a></li>
+                <li class="footer-list-item"><a href="#">Instagram</a></li>
+                <li class="footer-list-item"><a href="#">YouTube</a></li>
+              </ul>
+              <!-- End List -->
+            </div>
+          </div>
+          <!--// end row -->
+        </div>
+      </div>
+      <!-- End Links -->
+
+      <!-- Copyright -->
+      <div class="content container">
+        <div class="row">
+          <div class="col-xs-6"></div>
+          <div class="col-xs-6 text-right"></div>
+        </div>
+        <!--// end row -->
+      </div>
+      <!-- End Copyright -->
+    </footer>
+    <!--========== END FOOTER ==========-->
+
+    <!-- Back To Top -->
+    <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
+
+    <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+    <!-- CORE PLUGINS -->
+    <script src="vendor/jquery.min.js" type="text/javascript"></script>
+    <script src="vendor/jquery-migrate.min.js" type="text/javascript"></script>
+    <script
+      src="vendor/bootstrap/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+
+    <!-- PAGE LEVEL PLUGINS -->
+    <script src="vendor/jquery.easing.js" type="text/javascript"></script>
+    <script src="vendor/jquery.back-to-top.js" type="text/javascript"></script>
+    <script
+      src="vendor/jquery.smooth-scroll.js"
+      type="text/javascript"
+    ></script>
+    <script src="vendor/jquery.wow.min.js" type="text/javascript"></script>
+    <script
+      src="vendor/swiper/js/swiper.jquery.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="vendor/masonry/jquery.masonry.pkgd.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="vendor/masonry/imagesloaded.pkgd.min.js"
+      type="text/javascript"
+    ></script>
+
+    <!-- PAGE LEVEL SCRIPTS -->
+    <script src="js/layout.min.js" type="text/javascript"></script>
+    <script src="js/components/wow.min.js" type="text/javascript"></script>
+    <script src="js/components/swiper.min.js" type="text/javascript"></script>
+    <script src="js/components/masonry.min.js" type="text/javascript"></script>
+
+    <!-- Include the required scripts -->
+    <script src="lib/raphael-min.js" type="text/javascript"></script>
+    <script src="lib/raphael.free_transform.js" type="text/javascript"></script>
+    <script src="turntable-player.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+  <!-- END BODY -->
+</html>
