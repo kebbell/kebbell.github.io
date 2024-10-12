@@ -23,19 +23,27 @@
       gtag("config", "UA-23019901-3");
     </script>
 
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="range.css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&family=Yesteryear&display=swap" rel="stylesheet">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23019901-3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="range.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&family=Yesteryear&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-23019901-3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'UA-23019901-3');
-</script>
+      gtag("config", "UA-23019901-3");
+    </script>
 
     <!-- GLOBAL MANDATORY STYLES -->
     <link
@@ -138,14 +146,14 @@
     <!--========== PAGE LAYOUT ==========-->
 
     <!-- Turntable -->
-
-    <div id="buttons">
-      <div id="volume">
-        <input type="range" class="slider" min="0" max="100">
-        <div class="label"></div>
-      </div>
-      <div>
-        <div id="track" class="button">Track</div>
+    <div id="vinyl-player" style="padding: 20px 100px; display: flex; margin: auto; align-items: center; justify-content: center; width: 50%; height: 50%;">
+      <div id="buttons">
+        <div id="volume">
+          <input type="range" class="slider" min="0" max="100" />
+          <div class="label"></div>
+        </div>
+        <div>
+          <div id="track" class="button">Track</div>
           <div id="speed">
             <div id="speed33" class="button active">
               <span class="label">33</span>
@@ -157,32 +165,36 @@
             </div>
           </div>
         </div>
-      <div id="power" class="button">Start - Stop</div>
-      <div id="brand">
+        <div id="power" class="button">Start - Stop</div>
+        <div id="brand"></div>
       </div>
-    </div>
-    <div id="turntable" class="pause">
-      <div id="record">
-        <div id="record-inner">
-          <div id="label">
-            <iframe id="player" width="560" height="315" src frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div id="turntable" class="pause">
+        <div id="record">
+          <div id="record-inner">
+            <div id="label">
+              <iframe
+                id="player"
+                width="560"
+                height="315"
+                src
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <div id="shine"></div>
+        <div id="controls">
+          <div id="arm">
+            <div class="base"></div>
+            <div class="arm">
+              <div class="head"></div>
+            </div>
           </div>
         </div>
       </div>
-      <div id="shine"></div>
-      <div id="controls">
-        <div id="arm">
-          <div class="base"></div>
-          <div class="arm">
-            <div class="head"></div>
-          </div>
-        </div>
-      </div>
     </div>
-
-
-
-
 
     <!-- Features -->
     <div class="section-seperator">

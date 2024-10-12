@@ -27,7 +27,7 @@ function onPlayerReady(event) {
   document.querySelector('#volume .slider').value = volume;
 
   if (window.location.search) {
-    document.title = 'Needledrop: ' + player.getVideoData().title;
+    document.title = 'Kebbell: ' + player.getVideoData().title;
   }
 
   document.querySelector('#power').addEventListener('click', () => {
