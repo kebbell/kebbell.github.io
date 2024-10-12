@@ -1117,30 +1117,29 @@ input[type=range]:focus::-ms-fill-upper {
   --text-color: #222;
 }s
 
-/* html {
-  height: 100%;
-}
-
-body {
-  width: 100%;
-  height: 100%;
-  padding: 5vmin;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  background-color: var(--body-bg);
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 12px;
-  color: var(--text-color);
-} */
 
 #vinyl-player {
-  padding: 200px 100px;
-  /* display: flex;
-  flex-direction: row; */
+  padding: 50px 200px;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
 }
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  #vinyl-player {
+    padding: 30px 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  #vinyl-player {
+    padding: 20px 50px;
+    flex-direction: column; /* Change to column layout if needed for smaller devices */
+  }
+}
+
 
 
 #buttons {
@@ -1451,3 +1450,74 @@ body {
   #brand .banner a {
     color: #ccc;
   }
+
+  @media (max-width: 768px) {
+    #vinyl-player {
+      padding: 20px 50px; /* Reduce padding for smaller screens */
+      flex-direction: column; /* Stack elements vertically */
+    }
+  
+    #buttons {
+      width: 6em; /* Smaller width for buttons */
+      margin-right: 10px; /* Reduce margin */
+      height: auto; /* Auto height for responsiveness */
+    }
+  
+    #volume, #track, #power, #speed {
+      width: 6em; /* Smaller width for each button area */
+    }
+  
+    .button {
+      font-size: 0.8rem; /* Decrease button text size */
+      padding: 8px; /* Adjust padding for smaller buttons */
+    }
+  
+    #turntable {
+      width: 250px; /* Smaller turntable */
+      height: 250px;
+      margin-top: 20px; /* Adjust margin to prevent overlap */
+    }
+  
+    #record {
+      width: 100%; /* Turntable record fits smaller size */
+      height: 100%;
+    }
+  
+    #record-inner {
+      width: 70%; /* Adjust inner record size */
+      height: 70%;
+    }
+  
+    #arm .base {
+      width: calc(var(--arm-base-size) / 1.5); /* Scale down arm base */
+      height: calc(var(--arm-base-size) / 1.5);
+    }
+  
+    #arm .arm {
+      height: calc(var(--arm-base-size) * 3); /* Adjust arm height */
+    }
+  
+    #label {
+      width: calc(var(--record-size) / 4); /* Smaller label */
+      height: calc(var(--record-size) / 4);
+    }
+  
+    #label iframe {
+      width: calc(var(--record-size) / 4 + var(--label-padding) * 1.5); /* Adjust iframe size */
+      height: calc(var(--record-size) / 4 + var(--label-padding) * 1.5);
+    }
+  
+    #brand {
+      margin-top: 10px;
+    }
+  
+    #brand > a {
+      font-size: 1.2rem; /* Smaller font for brand text */
+    }
+  
+    #shine {
+      width: var(--record-size); /* Adjust shine effect for smaller size */
+      height: var(--record-size);
+    }
+  }
+  
