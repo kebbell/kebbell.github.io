@@ -174,6 +174,8 @@ h4 {
 }
 .section-seperator {
   border-bottom: 1px solid #edf0f2;
+
+
 }
 .content-wrapper-link {
   position: absolute;
@@ -739,9 +741,27 @@ fieldset[disabled] .btn-theme {
   padding-bottom: 60px;
 }
 .content-md {
+  display: grid;
   padding-top: 80px;
   padding-bottom: 80px;
 }
+.content-md2 {
+  display: flex;
+  justify-content: space-between; /* Distribute space between items */
+  padding-top: 80px;
+  padding-bottom: 80px;
+  gap: 40px;
+}
+
+.recordbag {
+  flex: 1; /* Each album takes equal space */
+  margin: 0 20px; /* Adjust margin as needed */
+}
+
+.recordbag:last-child {
+  margin-right: 0; /* Ensure the last album doesn't have extra margin on the right */
+}
+
 .content-lg {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -949,7 +969,6 @@ fieldset[disabled] .btn-theme {
   height: 300px !important;
 }
 
-
 /* RECENT */
 
 .scrollable-projects {
@@ -992,40 +1011,39 @@ fieldset[disabled] .btn-theme {
   }
 }
 
-
 :root {
   --slider-height: 7.2em;
-  --thumb-shadow: -3px 3px 3px rgba(0, 0, 0, .1);
+  --thumb-shadow: -3px 3px 3px rgba(0, 0, 0, 0.1);
   --thumb-color: #f7f7f7;
-  --track-color: rgba(0, 0, 0, .9);
+  --track-color: rgba(0, 0, 0, 0.9);
   --track-radius: 3px;
 }
 
-input[type=range] {
+input[type="range"] {
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
   width: 100%; /* Specific width is required for Firefox. */
   background: transparent; /* Otherwise white in Chrome */
 }
 
-input[type=range]::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
 }
 
-input[type=range]:focus {
+input[type="range"]:focus {
   outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
 }
 
-input[type=range]::-ms-track {
+input[type="range"]::-ms-track {
   width: 100%;
   cursor: pointer;
 
   /* Hides the slider so custom styles can be added */
-  background: transparent; 
+  background: transparent;
   border-color: transparent;
   color: transparent;
 }
 
-input[type=range]::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: 1px solid var(--border-color);
   height: var(--slider-height);
@@ -1033,11 +1051,13 @@ input[type=range]::-webkit-slider-thumb {
   background: var(--thumb-color);
   box-shadow: var(--thumb-shadow);
   cursor: pointer;
-  margin-top: calc(-1 * var(--slider-height) / 2 + 4px); /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  margin-top: calc(
+    -1 * var(--slider-height) / 2 + 4px
+  ); /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
 }
 
 /* All the same stuff for Firefox */
-input[type=range]::-moz-range-thumb {
+input[type="range"]::-moz-range-thumb {
   border: 1px solid var(--border-color);
   height: var(--slider-height);
   width: 16px;
@@ -1047,7 +1067,7 @@ input[type=range]::-moz-range-thumb {
 }
 
 /* All the same stuff for IE */
-input[type=range]::-ms-thumb {
+input[type="range"]::-ms-thumb {
   border: 1px solid var(--border-color);
   height: var(--slider-height);
   width: 16px;
@@ -1056,7 +1076,7 @@ input[type=range]::-ms-thumb {
   cursor: pointer;
 }
 
-input[type=range]::-webkit-slider-runnable-track {
+input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: 8.4px;
   cursor: pointer;
@@ -1064,11 +1084,11 @@ input[type=range]::-webkit-slider-runnable-track {
   border-radius: var(--track-radius);
 }
 
-input[type=range]:focus::-webkit-slider-runnable-track {
+input[type="range"]:focus::-webkit-slider-runnable-track {
   background: var(--track-color);
 }
 
-input[type=range]::-moz-range-track {
+input[type="range"]::-moz-range-track {
   width: 100%;
   height: 8.4px;
   cursor: pointer;
@@ -1076,7 +1096,7 @@ input[type=range]::-moz-range-track {
   border-radius: var(--track-radius);
 }
 
-input[type=range]::-ms-track {
+input[type="range"]::-ms-track {
   width: 100%;
   height: 8.4px;
   cursor: pointer;
@@ -1086,22 +1106,21 @@ input[type=range]::-ms-track {
   border-radius: var(--track-radius);
   color: transparent;
 }
-input[type=range]::-ms-fill-lower {
+input[type="range"]::-ms-fill-lower {
   background: var(--track-color);
   border: 0.2px solid #010101;
 }
-input[type=range]:focus::-ms-fill-lower {
+input[type="range"]:focus::-ms-fill-lower {
   background: var(--track-color);
 }
-input[type=range]::-ms-fill-upper {
+input[type="range"]::-ms-fill-upper {
   background: var(--track-color);
   border: 0.2px solid #010101;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
-input[type=range]:focus::-ms-fill-upper {
+input[type="range"]:focus::-ms-fill-upper {
   background: #367ebd;
 }
-
 
 :root {
   --record-size: 90vmin;
@@ -1113,12 +1132,11 @@ input[type=range]:focus::-ms-fill-upper {
   --arm-transition-duration: 0;
   --body-bg: #d7d7d5;
   --border-color: rgba(0, 0, 0, 0.15);
-  --box-shadow: 3px 3px 3px rgba(0, 0, 0, .1), inset 3px 3px 10px rgba(255, 255, 255, .5);
+  --box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1),
+    inset 3px 3px 10px rgba(255, 255, 255, 0.5);
   --text-color: #222;
-}s
-
-
-#vinyl-player {
+}
+s #vinyl-player {
   padding: 50px 200px;
   display: flex;
   margin: auto;
@@ -1139,8 +1157,6 @@ input[type=range]:focus::-ms-fill-upper {
     flex-direction: column; /* Change to column layout if needed for smaller devices */
   }
 }
-
-
 
 #buttons {
   display: flex;
@@ -1186,7 +1202,7 @@ input[type=range]:focus::-ms-fill-upper {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: rgba(255, 255, 255, .8);
+  background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid var(--border-color);
   cursor: pointer;
   user-select: none;
@@ -1195,7 +1211,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .button:active {
-  box-shadow: inset 3px 3px 3px rgba(0, 0, 0, .1);
+  box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.1);
 }
 
 .button .label {
@@ -1207,7 +1223,7 @@ input[type=range]:focus::-ms-fill-upper {
   width: 10px;
   height: 5px;
   margin-left: 10px;
-  background-color: rgba(0, 0, 0, .2);
+  background-color: rgba(0, 0, 0, 0.2);
   pointer-events: none;
 }
 
@@ -1222,7 +1238,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 #brand > a {
-  font-family: 'Yesteryear', cursive;
+  font-family: "Yesteryear", cursive;
   font-size: 1.6rem;
   color: var(--text-color);
   text-decoration: none;
@@ -1236,11 +1252,11 @@ input[type=range]:focus::-ms-fill-upper {
   width: 100%;
   padding: 3rem;
   font-size: 1em;
-  background-color: rgba(255, 255, 255, .95);
+  background-color: rgba(255, 255, 255, 0.95);
   text-transform: uppercase;
 }
 
-#brand:hover .banner, 
+#brand:hover .banner,
 #brand:focus-within .banner {
   display: block;
 }
@@ -1275,17 +1291,20 @@ input[type=range]:focus::-ms-fill-upper {
   width: var(--record-size);
   height: var(--record-size);
   background-color: var(--record-color);
-  background: repeating-radial-gradient(var(--record-color), var(--record-groove-color) 3px, var(--record-groove-color) 3px);
+  background: repeating-radial-gradient(
+    var(--record-color),
+    var(--record-groove-color) 3px,
+    var(--record-groove-color) 3px
+  );
   border: 20px solid var(--record-groove-color);
   border-radius: 50%;
-  box-shadow: 3px 3px 15px rgb(0, 0, 0, .3), -3px -3px 15px rgb(0, 0, 0, .3);
+  box-shadow: 3px 3px 15px rgb(0, 0, 0, 0.3), -3px -3px 15px rgb(0, 0, 0, 0.3);
   animation: spin 1.8s infinite linear;
-  transform-origin: calc(var(--record-size)/2 + 1px);
+  transform-origin: calc(var(--record-size) / 2 + 1px);
 }
 
 .pause #record {
   animation-play-state: paused;
-
 }
 
 #shine {
@@ -1294,15 +1313,17 @@ input[type=range]:focus::-ms-fill-upper {
   top: auto;
   width: var(--record-size);
   height: var(--record-size);
-  background: conic-gradient(transparent 20deg,
-                              rgba(255, 255, 255, .1) 40deg,
-                              rgba(255, 255, 255, .1) 50deg,
-                              transparent 60deg,
-                              transparent 200deg,
-                              rgba(255, 255, 255, .08) 220deg,
-                              rgba(255, 255, 255, .08) 240deg,
-                              transparent 250deg,
-                              transparent 340deg);
+  background: conic-gradient(
+    transparent 20deg,
+    rgba(255, 255, 255, 0.1) 40deg,
+    rgba(255, 255, 255, 0.1) 50deg,
+    transparent 60deg,
+    transparent 200deg,
+    rgba(255, 255, 255, 0.08) 220deg,
+    rgba(255, 255, 255, 0.08) 240deg,
+    transparent 250deg,
+    transparent 340deg
+  );
   border-radius: 50%;
   pointer-events: none;
 }
@@ -1336,19 +1357,21 @@ input[type=range]:focus::-ms-fill-upper {
   height: var(--arm-base-size);
   background-color: #d7d7d7;
   border-radius: 50%;
-  box-shadow: 5px 5px 8px rgba(0, 0, 0, .2), inset 5px 5px 5px rgba(255, 255, 255, .3), inset -2px -2px 5px rgba(0, 0, 0, .3);
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2),
+    inset 5px 5px 5px rgba(255, 255, 255, 0.3),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.3);
   z-index: 5;
 }
 
 #arm .arm {
   position: absolute;
-  top: calc(var(--arm-base-size) / 2 + .5rem + 4px);
-  right: calc(var(--arm-base-size) / 2 + .5rem + 4px);
+  top: calc(var(--arm-base-size) / 2 + 0.5rem + 4px);
+  right: calc(var(--arm-base-size) / 2 + 0.5rem + 4px);
   width: 10px;
   height: calc(var(--arm-base-size) * 3.9);
   background-color: #eee;
   background: linear-gradient(to right, #d7d7d6, #eee, #a5a5a3);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   transform: rotate(var(--arm-angle));
   transform-origin: top center;
   transition: var(--arm-transition-duration) transform linear;
@@ -1361,7 +1384,9 @@ input[type=range]:focus::-ms-fill-upper {
   width: 30px;
   height: 50px;
   background-color: #f7f7f7;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, .4), inset 3px 3px 3px rgba(255, 255, 255, .9), inset -3px -3px 3px rgba(0, 0, 0, .1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4),
+    inset 3px 3px 3px rgba(255, 255, 255, 0.9),
+    inset -3px -3px 3px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   cursor: pointer;
 }
@@ -1380,9 +1405,15 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); } 
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @media (max-width: 1100px) {
@@ -1433,91 +1464,265 @@ input[type=range]:focus::-ms-fill-upper {
     background-color: #363538;
   } */
 
-  #brand > a {
-    color: #ccc;
+#brand > a {
+  color: #ccc;
+}
+
+#arm .base {
+  background-color: #464548;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2),
+    inset 5px 5px 5px rgba(255, 255, 255, 0.3),
+    inset -2px -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#brand .banner {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #ccc;
+}
+
+#brand .banner a {
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  #vinyl-player {
+    padding: 20px 50px; /* Reduce padding for smaller screens */
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  #buttons {
+    width: 6em; /* Smaller width for buttons */
+    margin-right: 10px; /* Reduce margin */
+    height: auto; /* Auto height for responsiveness */
+  }
+
+  #volume,
+  #track,
+  #power,
+  #speed {
+    width: 6em; /* Smaller width for each button area */
+  }
+
+  .button {
+    font-size: 0.8rem; /* Decrease button text size */
+    padding: 8px; /* Adjust padding for smaller buttons */
+  }
+
+  #turntable {
+    width: 250px; /* Smaller turntable */
+    height: 250px;
+    margin-top: 20px; /* Adjust margin to prevent overlap */
+  }
+
+  #record {
+    width: 100%; /* Turntable record fits smaller size */
+    height: 100%;
+  }
+
+  #record-inner {
+    width: 70%; /* Adjust inner record size */
+    height: 70%;
   }
 
   #arm .base {
-    background-color: #464548;
-    box-shadow: 5px 5px 8px rgba(0, 0, 0, .2), inset 5px 5px 5px rgba(255, 255, 255, .3), inset -2px -2px 10px rgba(0, 0, 0, .3);
+    width: calc(var(--arm-base-size) / 1.5); /* Scale down arm base */
+    height: calc(var(--arm-base-size) / 1.5);
   }
 
-  #brand .banner {
-    background-color: rgba(0, 0, 0, .9);
-    color: #ccc;
+  #arm .arm {
+    height: calc(var(--arm-base-size) * 3); /* Adjust arm height */
   }
 
-  #brand .banner a {
-    color: #ccc;
+  #label {
+    width: calc(var(--record-size) / 4); /* Smaller label */
+    height: calc(var(--record-size) / 4);
   }
 
-  @media (max-width: 768px) {
-    #vinyl-player {
-      padding: 20px 50px; /* Reduce padding for smaller screens */
-      flex-direction: column; /* Stack elements vertically */
-    }
-  
-    #buttons {
-      width: 6em; /* Smaller width for buttons */
-      margin-right: 10px; /* Reduce margin */
-      height: auto; /* Auto height for responsiveness */
-    }
-  
-    #volume, #track, #power, #speed {
-      width: 6em; /* Smaller width for each button area */
-    }
-  
-    .button {
-      font-size: 0.8rem; /* Decrease button text size */
-      padding: 8px; /* Adjust padding for smaller buttons */
-    }
-  
-    #turntable {
-      width: 250px; /* Smaller turntable */
-      height: 250px;
-      margin-top: 20px; /* Adjust margin to prevent overlap */
-    }
-  
-    #record {
-      width: 100%; /* Turntable record fits smaller size */
-      height: 100%;
-    }
-  
-    #record-inner {
-      width: 70%; /* Adjust inner record size */
-      height: 70%;
-    }
-  
-    #arm .base {
-      width: calc(var(--arm-base-size) / 1.5); /* Scale down arm base */
-      height: calc(var(--arm-base-size) / 1.5);
-    }
-  
-    #arm .arm {
-      height: calc(var(--arm-base-size) * 3); /* Adjust arm height */
-    }
-  
-    #label {
-      width: calc(var(--record-size) / 4); /* Smaller label */
-      height: calc(var(--record-size) / 4);
-    }
-  
-    #label iframe {
-      width: calc(var(--record-size) / 4 + var(--label-padding) * 1.5); /* Adjust iframe size */
-      height: calc(var(--record-size) / 4 + var(--label-padding) * 1.5);
-    }
-  
-    #brand {
-      margin-top: 10px;
-    }
-  
-    #brand > a {
-      font-size: 1.2rem; /* Smaller font for brand text */
-    }
-  
-    #shine {
-      width: var(--record-size); /* Adjust shine effect for smaller size */
-      height: var(--record-size);
-    }
+  #label iframe {
+    width: calc(
+      var(--record-size) / 4 + var(--label-padding) * 1.5
+    ); /* Adjust iframe size */
+    height: calc(var(--record-size) / 4 + var(--label-padding) * 1.5);
   }
-  
+
+  #brand {
+    margin-top: 10px;
+  }
+
+  #brand > a {
+    font-size: 1.2rem; /* Smaller font for brand text */
+  }
+
+  #shine {
+    width: var(--record-size); /* Adjust shine effect for smaller size */
+    height: var(--record-size);
+  }
+}
+
+:root {
+  --color-theme: rgb(2, 176, 236);
+  --color-record-center: #fff;
+  --color-record-inner: #131313;
+  --color-record-groove: #000;
+  --color-record-outer: #000;
+  --spacing-groove: 10%;
+  --font-family: "Poppins", cursive;
+  --turntable-height: clamp(300px, 90vmin, 500px);
+  --disc-dimension: calc(var(--turntable-height) * 0.9);
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.music {
+  padding: 0 50px;
+}
+
+/* html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  overscroll-behavior: contain;
+} */
+.layout {
+  /* width: 100vw;
+  height: 100vh; */
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.turntable {
+  height: var(--turntable-height);
+  display: inline-flex;
+  gap: 1rem;
+  padding: calc(var(--turntable-height) * 0.05);
+  background: rgb(233, 233, 233);
+  border-radius: 3px;
+  box-shadow: 12px 14px 18px 2px #a6a1a17f;
+}
+.disc-container {
+  aspect-ratio: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid #000;
+  background: linear-gradient(45deg, rgb(255, 255, 255), rgb(66, 66, 66));
+}
+.disc {
+  position: relative;
+  aspect-ratio: 1;
+  width: 91%;
+  overflow: hidden;
+  border-radius: 50%;
+  background: repeating-radial-gradient(
+    var(--color-record-inner),
+    var(--color-record-groove) 2px,
+    var(--color-record-groove) 2px,
+    var(--color-record-inner) 4px
+  );
+  cursor: grab;
+}
+.disc.is-scratching {
+  cursor: grabbing;
+}
+.disc__que {
+  --dim: 10px;
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  width: var(--dim);
+  height: var(--dim);
+  background: var(--color-theme);
+  border-radius: 50%;
+}
+.disc__label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: calc(var(--disc-dimension) * 0.4);
+  height: calc(var(--disc-dimension) * 0.4);
+  background: white;
+  background-size: cover;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.disc__middle {
+  --dim: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--dim);
+  height: var(--dim);
+  background: rgb(26, 26, 26);
+  border-radius: 50%;
+}
+.disc__glare {
+  width: var(--disc-dimension);
+  height: 15%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-30deg);
+  background: rgba(255, 255, 255, 0.15);
+  filter: blur(10px);
+  pointer-events: none;
+}
+.sidebar {
+  display: flex;
+  height: 100%;
+}
+.controls {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.controls__row {
+  justify-content: center;
+  gap: 10px;
+}
+.control {
+  font-family: Hind, sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+}
+.rewind {
+  display: none;
+}
+.button {
+  border-radius: 0;
+  border: none;
+  background: rgb(69, 69, 69);
+  font-size: 10px;
+  padding: 0.4rem;
+  color: #fff;
+  line-height: 1.3;
+  cursor: pointer;
+  box-shadow: 1px 1px 0 1px #000, 0 0 0 0 var(--color-theme);
+  will-change: box-shadow;
+  transition: box-shadow 0.2s ease-out, transform 0.05s ease-in;
+}
+.button.is-active {
+  transform: translate(1px, 2px);
+  box-shadow: 0 0 5px 1px var(--color-theme);
+}
+
+

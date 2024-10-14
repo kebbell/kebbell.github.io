@@ -23,6 +23,9 @@
       gtag("config", "UA-23019901-3");
     </script>
 
+    <script src="app.js"></script>
+
+
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="range.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -146,7 +149,7 @@
     <!--========== PAGE LAYOUT ==========-->
 
     <!-- Turntable -->
-    <div id="vinyl-player" style="padding: 20px 100px; display: flex; margin: auto; align-items: center; justify-content: center; width: 50%; height: 50%;">
+    <!-- <div id="vinyl-player" style="padding: 20px 100px; display: flex; margin: auto; align-items: center; justify-content: center; width: 50%; height: 50%;">
       <div id="buttons">
         <div id="volume">
           <input type="range" class="slider" min="0" max="100" />
@@ -194,90 +197,127 @@
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- Features -->
-    <div class="section-seperator">
-      <div class="content-md container">
-        <div class="row">
-          <!-- Album 1 -->
-          <div class="col-sm-4 sm-margin-b-50">
-            <div
-              class="wow fadeInLeft"
-              data-wow-duration=".3"
-              data-wow-delay=".3s"
-            >
-              <div class="recordbag">
-                <li class="grid__item">
-                  <a class="grid__link" href="#album-1">
-                    <div class="img-wrap img-wrap--grid">
-                      <svg class="lp lp--grid">
-                        <use xlink:href="#icon-lp-mini"></use>
-                      </svg>
-                      <img class="img img--grid" src="img/album1.jpg" alt="" />
-                    </div>
-                    <span class="year">1977</span>
-                    <h2 class="artist">Fleetwood Mac</h2>
-                    <h3 class="title">Rumours</h3>
-                  </a>
-                </li>
-              </div>
+    </div> -->
+    <section class="music">
+      <div class="layout">
+        <div class="turntable">
+          <div class="disc-container">
+            <div class="disc" id="disc">
+              <div class="disc__que"></div>
+              <div class="disc__label"></div>
+              <div class="disc__middle"></div>
             </div>
+            <div class="disc__glare"></div>
           </div>
 
-          <!-- Album 2 -->
-          <div class="col-sm-4 sm-margin-b-50">
-            <div
-              class="wow fadeInLeft"
-              data-wow-duration=".3"
-              data-wow-delay=".2s"
-            >
-              <div class="recordbag">
-                <li class="grid__item">
-                  <a class="grid__link" href="#album-2">
-                    <div class="img-wrap img-wrap--grid">
-                      <svg class="lp lp--grid">
-                        <use xlink:href="#icon-lp-mini"></use>
-                      </svg>
-                      <img class="img img--grid" src="img/album2.jpg" alt="" />
-                    </div>
-                    <span class="year">1984</span>
-                    <h2 class="artist">Prince</h2>
-                    <h3 class="title">Purple Rain</h3>
-                  </a>
-                </li>
-              </div>
-            </div>
-          </div>
-
-          <!-- Album 3 -->
-          <div class="col-sm-4">
-            <div
-              class="wow fadeInLeft"
-              data-wow-duration=".3"
-              data-wow-delay=".1s"
-            >
-              <div class="recordbag">
-                <li class="grid__item">
-                  <a class="grid__link" href="#album-3">
-                    <div class="img-wrap img-wrap--grid">
-                      <svg class="lp lp--grid">
-                        <use xlink:href="#icon-lp-mini"></use>
-                      </svg>
-                      <img class="img img--grid" src="img/album3.jpg" alt="" />
-                    </div>
-                    <span class="year">1989</span>
-                    <h2 class="artist">Bright</h2>
-                    <h3 class="title">Gone Again</h3>
-                  </a>
-                </li>
+          <div class="sidebar">
+            <div class="controls">
+              <div class="controls__row">
+                <button class="control button" id="playToggle">Power</button>
+                <button class="control button rewind" id="rewind">
+                  &lt;&lt;
+                </button>
               </div>
             </div>
           </div>
         </div>
-        <!--// end row -->
       </div>
-    </div>
+
+      <!-- Features -->
+      <div class="section-seperator">
+        <div class="content-md2 container">
+          <div class="row">
+            <!-- Album 1 -->
+            <div class="col-sm-4 sm-margin-b-50">
+              <div
+                class="wow fadeInLeft"
+                data-wow-duration=".3"
+                data-wow-delay=".3s"
+              >
+                <div class="recordbag">
+                  <li class="grid__item">
+                    <a class="grid__link" href="#album-1">
+                      <div class="img-wrap img-wrap--grid">
+                        <svg class="lp lp--grid">
+                          <use xlink:href="#icon-lp-mini"></use>
+                        </svg>
+                        <img
+                          class="img img--grid"
+                          src="img/album1.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <span class="year">1977</span>
+                      <h2 class="artist">Fleetwood Mac</h2>
+                      <h3 class="title">Rumours</h3>
+                    </a>
+                  </li>
+                </div>
+              </div>
+            </div>
+
+            <!-- Album 2 -->
+            <div class="col-sm-4 sm-margin-b-50">
+              <div
+                class="wow fadeInLeft"
+                data-wow-duration=".3"
+                data-wow-delay=".2s"
+              >
+                <div class="recordbag">
+                  <li class="grid__item">
+                    <a class="grid__link" href="#album-2">
+                      <div class="img-wrap img-wrap--grid">
+                        <svg class="lp lp--grid">
+                          <use xlink:href="#icon-lp-mini"></use>
+                        </svg>
+                        <img
+                          class="img img--grid"
+                          src="img/album2.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <span class="year">1984</span>
+                      <h2 class="artist">Prince</h2>
+                      <h3 class="title">Purple Rain</h3>
+                    </a>
+                  </li>
+                </div>
+              </div>
+            </div>
+
+            <!-- Album 3 -->
+            <div class="col-sm-4">
+              <div
+                class="wow fadeInLeft"
+                data-wow-duration=".3"
+                data-wow-delay=".1s"
+              >
+                <div class="recordbag">
+                  <li class="grid__item">
+                    <a class="grid__link" href="#album-3">
+                      <div class="img-wrap img-wrap--grid">
+                        <svg class="lp lp--grid">
+                          <use xlink:href="#icon-lp-mini"></use>
+                        </svg>
+                        <img
+                          class="img img--grid"
+                          src="img/album3.jpg"
+                          alt=""
+                        />
+                      </div>
+                      <span class="year">1989</span>
+                      <h2 class="artist">Bright</h2>
+                      <h3 class="title">Gone Again</h3>
+                    </a>
+                  </li>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--// end row -->
+        </div>
+      </div>
+    </section>
     <!-- End Features -->
 
     <!--========== END PAGE LAYOUT ==========-->
