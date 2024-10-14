@@ -1337,7 +1337,6 @@ s #vinyl-player {
   overflow: hidden;
   -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
-
 #label iframe {
   width: calc(var(--record-size) / 3 + var(--label-padding) * 2);
   height: calc(var(--record-size) / 3 + var(--label-padding) * 2);
