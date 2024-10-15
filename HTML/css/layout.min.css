@@ -1205,7 +1205,7 @@ s #vinyl-player {
   background-color: rgba(255, 255, 255, 0.8);
   border: 1px solid var(--border-color);
   cursor: pointer;
-  user-select: none;
+  /* user-select: none; */
   text-transform: uppercase;
   box-shadow: var(--box-shadow);
 }
@@ -1335,7 +1335,7 @@ s #vinyl-player {
   border: 5px solid var(--record-groove-color);
   border-radius: 50%;
   overflow: hidden;
-  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  /* -webkit-mask-image: radial-gradient(white, black); */
 }
 #label iframe {
   width: calc(var(--record-size) / 3 + var(--label-padding) * 2);
@@ -1725,3 +1725,7 @@ body {
 }
 
 
+
+#canvas {
+  border: 1px solid black;
+}
