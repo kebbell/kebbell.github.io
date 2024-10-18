@@ -314,7 +314,7 @@
 
 html {
     line-height              : 1.15;
-    -webkit-text-size-adjust : 100%;
+    /* -webkit-text-size-adjust : 100%; */
 }
 
 body {
@@ -519,7 +519,7 @@ body {
 body {
     background-color            : var(--color-body);
     -webkit-overflow-scrolling  : touch;
-    -webkit-text-size-adjust    : 100%;
+    /* -webkit-text-size-adjust    : 100%; */
     -webkit-tap-highlight-color : rgba(0, 0, 0, 0);
     -webkit-font-smoothing      : antialiased;
     -moz-osx-font-smoothing     : grayscale;
@@ -3411,11 +3411,14 @@ img.u-pull-left {
     object-fit     : cover;
     margin         : 0;
     vertical-align : bottom;
+    margin-left: 40px ;
+    opacity: 0.2;
+    transition: all .3s ease-in-out;
 }
 
 .about-info__text {
     padding     : var(--vspace-3_5) 10vw var(--vspace-2) 0;
-    margin-left : -4rem;
+    /* margin-left : -4rem; */
 }
 
 .about-info__text .text-pretitle {
