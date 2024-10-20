@@ -3411,8 +3411,9 @@ img.u-pull-left {
     object-fit     : cover;
     margin         : 0;
     vertical-align : bottom;
-    margin-left: 40px;
-    margin-right: 40px;
+    /* align-items: center;
+    width: 90%; */
+    /* margin: 0 20px; */
     opacity: 0.2;
     transition: all .3s ease-in-out;
 }
