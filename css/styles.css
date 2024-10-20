@@ -3411,7 +3411,7 @@ img.u-pull-left {
     object-fit     : cover;
     margin         : 0;
     vertical-align : bottom;
-    margin-left: 40px ;
+    margin-left: 40px;
     margin-right: 40px;
     opacity: 0.2;
     transition: all .3s ease-in-out;
@@ -4242,3 +4242,7 @@ img.u-pull-left {
         right : 6vw;
     }
 }
+
+
+
+
