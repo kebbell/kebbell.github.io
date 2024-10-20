@@ -3412,6 +3412,7 @@ img.u-pull-left {
     margin         : 0;
     vertical-align : bottom;
     margin-left: 40px ;
+    margin-right: 40px;
     opacity: 0.2;
     transition: all .3s ease-in-out;
 }
