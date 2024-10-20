@@ -3660,10 +3660,10 @@ img.u-pull-left {
     margin         : 0;
 }
 
-.folio-list__item-pic::before,
+/* .folio-list__item-pic::before,
 .folio-list__item-pic::after {
     transition : all, 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
+} */
 
 .folio-list__item-pic::before {
     z-index          : 1;
