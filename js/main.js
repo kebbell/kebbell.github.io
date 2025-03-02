@@ -205,7 +205,7 @@
             });
         }
 
-    }; // end ssViewAnimate
+    }; // end ssViewAnimate 
 
 
    /* Swiper
