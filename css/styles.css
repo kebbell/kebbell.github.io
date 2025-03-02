@@ -3896,6 +3896,12 @@ img.u-pull-left {
     color : white;
 }
 
+.testimonial-slider__quote {
+    font-size   : calc(var(--text-size) * 0.9447);
+    line-height : var(--vspace-1);
+    color       : rgba(0, 0, 0, 0.75);
+}
+
 .testimonial-slider__author {
     display       : inline-block;
     min-height    : var(--vspace-2);
