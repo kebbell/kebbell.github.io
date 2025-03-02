@@ -360,3 +360,5 @@
     })();
 
 })(document.documentElement);
+
+const tl = gsap.timeline({defaults: {duration: 1, ease: "power1.out"}});
