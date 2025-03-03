@@ -360,7 +360,3 @@
     })();
 
 })(document.documentElement);
-
-const tl = gsap.timeline({defaults: {duration: 1, ease: "power1.out"}});
-
-tl.from(".logo", {y: 10, opacity: 0, duration: 1})
